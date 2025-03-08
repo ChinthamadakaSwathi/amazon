@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amazon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar-1 {
+      width: 100vw;
+      height: 60px;
+      background-color: black;
+      padding: 5px;
+      position: fixed;
+      top: 0;
+      z-index: 30;
+    }
+
+    .navbar-1 img {
+      width: 100px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    .navbar-1 img:hover {
+      width: 100px;
+      border: 1px solid white;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .navbar-1 i {
+      color: white;
+    }
+
+    .location {
+      border: 1px solid black;
+      padding: 5px;
+      cursor: pointer;
+    }
+    .locicon{
+      margin-right: 10px ;
+    }
+
+    .info {
+      font-size: small;
+    }
+
+    .location:hover {
+      border: 1px solid white;
+      padding: 5px;
+    }
+
+    .input-group {
+      width: 600px;
+      height: 50px;
+      padding-top: 10px;
+    }
+
+    .bar1 {
+      border: 5px solid black;
+    }
+
+    .drpdwn {
+      background-color: rgba(255, 255, 255, 0.639);
+      color: black;
+      font-size: small;
+      font-weight: 500;
+    }
+
+    .drpdwn:hover {
+
+      background-color: rgba(255, 255, 255, 0.639);
+      font-size: small;
+      font-weight: 500;
+    }
+
+    .search:hover {
+      cursor: pointer;
+
+      .bar1 {
+        border: 2px solid orange;
+      }
+
+    }
+
+    .country {
+      color: white;
+    }
+
+    .country img {
+      width: 30px;
+      margin-right: 5px;
+    }
+
+    .country:hover {
+      border: 1px solid white;
+      color: white;
+
+      .flag {
+        width: 30px;
+        margin-right: 5px;
+        border: none;
+      }
+
+    }
+
+    .drpdwn2 {
+      font-size: small;
+    }
+
+    .return:hover {
+      cursor: pointer;
+    }
+
+    .cart:hover {
+      cursor: pointer;
+    }
+
+    .navbar-2 {
+      width: 100vw;
+      height: 50px;
+      background-color: rgba(14, 20, 32, 0.916);
+      padding: 5px;
+      position: relative;
+      top: 60px;
+      z-index: 10;
+    }
+
+    .cor {
+      position: relative;
+      top: 50px;
+    }
+    
+    .fade-upgrade{
+      min-height: 100vh;
+      bottom:600px;
+      background: Linear-gradient(to bottom,transparent,white,white,white,white,white,white,white,white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sec2{
+position: relative;
+bottom: 304px;
+
+
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: 300px 300px 300px 300px;
+      grid-template-rows: 400px 400px 300px 300px 400px 400px;
+    
+      position: relative;
+    }
+
+    .box {
+      padding: 20px 10px;
+      background-color: #ffffff;
+      box-shadow: 0 0 60px rgba(128, 128, 128, 0.221);
+    }
+
+    .box img {
+      width: 130px;
+    }
+
+    .heading {
+      font-weight: 700;
+      margin-bottom: 30px;
+
+    }
+
+    .name {
+      font-size: smaller;
+    }
+
+    .anchor {
+      text-decoration: none;
+      font-size: small;
+
+    }
+
+    .box1 {
+
+      background-color: white;
+      grid-area: 1/1/2/2;
+
+    }
+
+    .box2 {
+
+      background-color: white;
+      grid-area: 1/2/2/3;
+
+
+    }
+
+    .box3 {
+
+      background-color: white;
+      grid-area: 1/3/2/4;
+
+
+    }
+
+    .box4 {
+
+      background-color: white;
+      grid-area: 1/4/2/5;
+
+
+    }
+
+    .box5 {
+
+      background-color: white;
+      grid-area: 2/1/3/2;
+
+
+    }
+
+    .box6 {
+
+      background-color: white;
+      grid-area: 2/2/3/3;
+
+
+    }
+
+    .box7 {
+
+      background-color: white;
+      grid-area: 2/3/3/4;
+
+
+    }
+
+    .box8 {
+
+      background-color: white;
+      grid-area: 2/4/3/5;
+    }
+
+    .box9 {
+
+      background-color: white;
+      grid-area: 3/1/4/5;
+
+    }
+
+    .box9 img {
+      width: 100px;
+    }
+
+    .box-9 {
+      overflow: scroll;
+      scrollbar-width: none;
+    }
+
+    .box10 {
+
+      background-color: white;
+      grid-area: 4/1/5/5;
+      overflow: scroll;
+      scrollbar-width: none;
+    }
+
+    .box10 img {
+      width: 150px;
+    }
+
+    .box-10 {
+      overflow: scroll;
+      scrollbar-width: none;
+    }
+
+    .box11 {
+
+      background-color: white;
+      grid-area: 5/1/6/2;
+    }
+
+    .box12 {
+
+      background-color: white;
+      grid-area: 5/2/6/3;
+    }
+
+    .box12 img {
+      margin-top: 0;
+      height: 180px;
+    }
+
+    .box13 {
+
+      background-color: white;
+      grid-area: 5/3/6/4;
+    }
+
+    .box13 img {
+      margin-top: 0;
+      height: 180px;
+    }
+
+    .box14 {
+
+      background-color: white;
+      grid-area: 5/4/6/5;
+    }
+
+    .box15 {
+
+      background-color: white;
+      grid-area: 6/1/7/5;
+
+    }
+
+    .box15 img {
+      width: 300px;
+    }
+
+    .box-15 {
+      overflow-x: scroll;
+      overflow-y: none;
+      scrollbar-width: none;
+
+    }
+    .recommendation-box{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 410%;
+      left: 35%;
+      
+    }
+    .signin-btn{
+      width: 300px;
+      background-color: #ffcc00;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 25px;
+    }
+    .footer {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin: 10px;
+            text-align: left;
+        }
+        .footer-section h5<div {
+            margin-bottom: 10px;
+        }
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: auto;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        .back{
+          background-color: #3c5067;
+          text-align: center;
+          color: white;
+          height: 30px;
+        }
+        .footer-bottom {
+          posotion:fixed;
+          bottom: 0;
+          width: 100%;
+          min-height: 2vh;
+          background-color: #021731;
+          color: white;
+          font-size: 15px;
+          padding: 2px;
+          text-align: center;
+        }
+  </style>
+
+</head>
+
+<body>
+  <div class="navbar-1 d-flex justify-content-evenly align-items-center gap-2">
+    <img src="amazon-logo.png" alt="" class="my-0">
+    <div class=" location d-flex justify-content-center align-items-center">
+      <span><i class="fa-solid fa-location-dot icon"></i></span>
+      <div class="location-update d-flex flex-column">
+        <p class="m-0 text-white info">Delivering to Hyderabad 5000062</p>
+        <b class="m-0 text-white">Update location</b>
+      </div>
+    </div>
+    <div class="input-group mb-3 bar1">
+      <button class="btn dropdown-toggle drpdwn" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">All</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+      <input type="text" class="form-control search" aria-label="Text input with dropdown button"
+        placeholder="Search Amazon.in">
+      <span class="input-group-text bg-warning" id="basic-addon2"><i
+          class="fa-solid fa-magnifying-glass icon"></i></span>
+
+    </div>
+    <div>
+      <button class="btn dropdown-toggle country mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="india.png" alt="" class="flag"><b>EN</b>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <button class="btn dropdown-toggle country drpdwn2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <p class="m-0">Hello,sign in</p>
+        <b class="m-0">Accounts & Lists</b>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <p class="m-0">Returns &</p>
+      <b class="m-0">Orders</b>
+    </div>
+
+    <div class="country drpdwn2 p-2 cart ">
+      <span class="m-0"><i class="fa-solid fa-cart-shopping icon"></i></span>
+      <span class="m-0">cart</span>
+    </div>
+  </div>
+
+  <!-- navbar section-2 -->
+  <div class="navbar-2 d-flex  justify-content-evenly align-items-center  gap-2">
+
+    <div class="country drpdwn2 p-2 r mx-2">
+      <b class="m-0"><i class="fa-solid fa-grip-lines mx-1"></i>All</b>
+    </div>
+
+
+    <div>
+      <button class="btn dropdown-toggle country drpdwn2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <b class="m-0">Fresh</b>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+
+    <div class="country p-2 return">
+      <b class="m-0">MX player</b>
+
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Sell</b>
+
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Best Sellers</b>
+
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Today's Deals</b>
+
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Mobiles</b>
+
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">CustomerService</b>
+
+    </div>
+    <div class="country drpdwn2 p-2 return">
+
+      <b class="m-0">Electronics</b>
+    </div>
+    <div>
+      <button class="btn dropdown-toggle country drpdwn2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <b class="m-0">Prime</b>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+    <div class="country drpdwn2 p-2 return">
+
+      <b class="m-0">New Releases</b>
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Amazon Pay</b>
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Home & Kitchen</b>
+    </div>
+    <div class="country drpdwn2 p-2 return">
+      <b class="m-0">Fashon</b>
+    </div>
+
+  </div>
+  <!-- caoursel section-1-->
+  <div id="carouselExampleInterval" class="carousel slide cor" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="800">
+        <img src="image1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="800">
+        <img src="image2.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="800">
+        <img src="image3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="800">
+        <img src="image4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="800">
+        <img src="image5.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- box section-2 -->
+   <div class="sec2">
+
+   
+  <div class="fade-upgrade  w-100 p-3">
+
+    <div class="boxes gap-4">
+      <div class="box box1">
+        <h4 class="heading">Appliances for your home | Up to 55% off</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="1.1.jpg" alt="" class="appliances">
+            <p class="name">Air conditioners</p>
+          </div>
+          <div>
+            <img src="1.2.jpg" alt="" class="appliances">
+            <p class="name">Refrigerators</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="1.3.jpg" alt="" class="appliances">
+            <p class="name">Microwaves</p>
+          </div>
+          <div>
+            <img src="1.4.jpg" alt="" class="appliances">
+            <p class="name">Washing machine</p>
+          </div>
+        </div>
+        <a href="" class="anchor">see more</a>
+      </div>
+      <div class="box box2">
+        <h4 class="heading">Automotive essentials | Up to 60% off</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="4.1.jpg" alt="" class="appliances">
+            <p class="name m-0">Spin mops,wipes & more</p>
+          </div>
+          <div>
+            <img src="4.2.jpg" alt="" class="appliances">
+            <p class="name m-0">Bathroom hardware & accessories</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="4.3.jpg" alt="" class="appliances">
+            <p class="name m-0">Hammers,screwdrivers & more</p>
+          </div>
+          <div>
+            <img src="4.4.jpg" alt="" class="appliances">
+            <p class="name m-0">Extension boards,plugs & more</p>
+          </div>
+        </div>
+        <a href="" class="anchor">Explore all</a>
+      </div>
+      <div class="box box3">
+        <h4 class="heading">Starting ₹149 | Headphones</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="3.1.jpg" alt="" class="appliances">
+            <p class="name m-0">Cushion covers, bedsheets & more</p>
+          </div>
+          <div>
+            <img src="3.2.jpg" alt="" class="appliances">
+            <p class="name m-0">Figurines, vases & more</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="3.3.jpg" alt="" class="appliances">
+            <p class="name">Home Storage</p>
+          </div>
+          <div>
+            <img src="3.4.jpg" alt="" class="appliances">
+            <p class="name">Ligting Solutions</p>
+          </div>
+        </div>
+        <a href="" class="anchor">Explore all</a>
+      </div>
+      <div class="box box4">
+        <h4 class="heading">Starting &#8377;149 | Headphones</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="2.1.jpg" alt="" class="appliances">
+            <p class="name">Starting &#8377;249 | boAt</p>
+          </div>
+          <div>
+            <img src="2.2.jpg" alt="" class="appliances">
+            <p class="name">Starting &#8377;349 | boult</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="2.3.jpg" alt="" class="appliances">
+            <p class="name">Starting &#8377;249 | Noise</p>
+          </div>
+          <div>
+            <img src="2.4.jpg" alt="" class="appliances">
+            <p class="name m-0">Starting &#8377;249 | zebronics</p>
+          </div>
+        </div>
+        <a href="" class="anchor">see all offers</a>
+      </div>
+      <div class="box box5">
+        <h4 class="heading">Starting &#8377;199 | Amazon Brands & more</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="01.1.jpg" alt="" class="appliances">
+            <p class="name m-0">Starting &#8377;199 | Bedsheets</p>
+          </div>
+          <div>
+            <img src="01.2.jpg" alt="" class="appliances">
+            <p class="name m-0">Starting &#8377;199 | Curtains</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="01.3.jpg" alt="" class="appliances">
+            <p class="name m-0">Minimum 40% off | Ironing board & more</p>
+          </div>
+          <div>
+            <img src="01.4.jpg" alt="" class="appliances">
+            <p class="name m-0">Up to 60% off | Home decor</p>
+          </div>
+        </div>
+        <a href="" class="anchor">see more</a>
+      </div>
+      <div class="box box6">
+        <h4 class="heading">Explore more from Small Businesses</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="02.1.jpg" alt="" class="appliances">
+            <p class="name m-0">Ethnic,dresses & more</p>
+          </div>
+          <div>
+            <img src="02.2.jpg" alt="" class="appliances">
+            <p class="name">Decor</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="02.3.jpg" alt="" class="appliances">
+            <p class="name m-0">Fashion accessories</p>
+          </div>
+          <div>
+            <img src="02.4.jpg" alt="" class="appliances">
+            <p class="name m-0">Glassware & drinkware</p>
+          </div>
+        </div>
+        <a href="" class="anchor">Explore all</a>
+      </div>
+      <div class="box box7">
+        <h4 class="heading">Up to 60% off | Styles for women</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="03.1.jpg" alt="" class="appliances">
+            <p class="name">Women's Clothing</p>
+          </div>
+          <div>
+            <img src="03.2.jpg" alt="" class="appliances">
+            <p class="name">Footwear+Handbags</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="03.3.jpg" alt="" class="appliances">
+            <p class="name">Watches</p>
+          </div>
+          <div>
+            <img src="03.4.jpg" alt="" class="appliances">
+            <p class="name">Fashon jewellery</p>
+          </div>
+        </div>
+        <a href="" class="anchor">End of season sale</a>
+      </div>
+      <div class="box box8">
+        <h4 class="heading">Automotive essentials | Up to 60% off</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="04.1.jpg" alt="" class="appliances">
+            <p class="name m-0">Cleaning accessories</p>
+          </div>
+          <div>
+            <img src="04.2.jpg" alt="" class="appliances">
+            <p class="name">Tyre & rim care</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="04.3.jpg" alt="" class="appliances">
+            <p class="name">Helmets</p>
+          </div>
+          <div>
+            <img src="04.4.jpg" alt="" class="appliances">
+            <p class="name">Vaccum cleaner</p>
+          </div>
+        </div>
+        <a href="" class="anchor">see more</a>
+      </div>
+      <div class="box box9">
+        <div class="d-flex gap-4 long">
+          <h4 class="heading ">Up to 60% off | Curated kitchen products | Amazon Launchpad</h4>
+          <a href="" class="anchor">see all</a>
+        </div>
+        <div class="d-flex gap-5 box-9 ">
+          <img src="k1.jpg" alt="">
+          <img src="k2.jpg" alt="">
+          <img src="k3.jpg" alt="">
+          <img src="k4.jpg" alt="">
+          <img src="k5.jpg" alt="">
+          <img src="k6.jpg" alt="">
+          <img src="k7.jpg" alt="">
+          <img src="k8.jpg" alt="">
+          <img src="k9.jpg" alt="">
+          <img src="k10.jpg" alt=""><img src="k11.jpg" alt="">
+          <img src="k12.jpg" alt="">
+          <img src="k1.jpg" alt="">
+          <img src="k2.jpg" alt="">
+          <img src="k3.jpg" alt="">
+        </div>
+
+      </div>
+      <div class="box box10">
+        <div class="d-flex gap-4">
+          <h4 class="heading ">Min. 50% off | Unique finds from government emporiums </h4>
+          <a href="" class="anchor">see all offers</a>
+        </div>
+        <div class="d-flex gap-5 box-10">
+          <img src="h1.jpg" alt="">
+          <img src="h2.jpg" alt="">
+          <img src="h3.jpg" alt="">
+          <img src="h4.jpg" alt="">
+          <img src="h5.jpg" alt="">
+          <img src="h6.jpg" alt="">
+          <img src="h7.jpg" alt="">
+          <img src="h8.jpg" alt="">
+          <img src="h9.jpg" alt="">
+          <img src="h10.jpg" alt="">
+          <img src="h11.jpg" alt="">
+          <img src="h12.jpg" alt="">
+          <img src="h14.jpg" alt="">
+          <img src="h14.jpg" alt="">
+          <img src="h1.jpg" alt="">
+        </div>
+
+      </div>
+      <div class="box box11">
+        <h4 class="heading">Best Sellers in Sports, Fitness & Outdoors</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="f1.jpg" alt="" class="appliances m-0">
+
+          </div>
+          <div>
+            <img src="f2.jpg" alt="" class="appliances m-0 ">
+
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="f3.jpg" alt="" class="appliances m-0">
+
+          </div>
+
+          <div>
+            <img src="f4.jpg" alt="" class="appliances m-0">
+
+          </div>
+
+        </div>
+      </div>
+      <div class="box box12">
+        <h4 class="heading">Up to 80% off | Handcrafted products</h4>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="handy1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="handy2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="handy3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <p class="m-0">Vemptico Wooden Floating Shelves, 6 Piece Hexagonal Shape Wall Mo...</p>
+        <p class="m-0"><sup>&#8377;</sup><b>880</b><sup>00</sup> M.R.P : <s>&#8377;1,899.00</s></p>
+      </div>
+      <div class="box box13">
+        <h4 class="heading">Up to 60% off | Best offers on furniture fro…</h4>
+        <div id="carouselExample" class="carousel slide mb-2">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="furni.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="furni2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="furni3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+        <p class="m-0">GRAPEWOOD Baloney RHS 6 seater L shape Sofa Set with Center Table...</p>
+        <p class="m-0"><sup>&#8377;</sup><b>24,999</b><sup>00</sup> M.R.P : <s>&#8377;49,999</s></p>
+      </div>
+      <div class="box box14">
+        <h4 class="heading">Under ₹499 | Pocket-friendly fashion</h4>
+        <div class="d-flex gap-3 mb-3">
+          <div class="div">
+            <img src="c1.jpg" alt="" class="appliances">
+            <p class="name">Clothing</p>
+          </div>
+          <div>
+            <img src="ba1.jpg" alt="" class="appliances">
+            <p class="name">Backpacks</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div>
+            <img src="f01.jpg" alt="" class="appliances">
+            <p class="name">Footwear</p>
+          </div>
+          <div>
+            <img src="v1.jpg" alt="" class="appliances">
+            <p class="name">View all</p>
+          </div>
+        </div>
+        <a href="" class="anchor">see all offers</a>
+      </div>
+      <div class="box box15">
+        <div class="d-flex gap-4">
+          <h4 class="heading ">Petrol & electric vehicles from stores near you</h4>
+          <a href="anchor" class="anchor">see all offers</a>
+        </div>
+        <div class="d-flex gap-5 box-15">
+          <img src="b1.jpg" alt="">
+          <img src="b2.jpg" alt="">
+          <img src="b3.jpg" alt="">
+          <img src="b4.jpg" alt="">
+          <img src="b5.jpg" alt="">
+          <img src="b6.jpg" alt="">
+          <img src="b7.jpg" alt="">
+          <img src="b8.jpg" alt="">
+          <img src="b9.jpg" alt="">
+          <img src="b10.jpg" alt="">
+          <img src="b1.jpg" alt="">
+          <img src="b2.jpg" alt="">
+          <img src="b3.jpg" alt="">
+          <img src="b4.jpg" alt="">
+          <img src="b5.jpg" alt="">
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+ </div>
+<!-- footer section -->
+ <div class="recommendation-box">
+  <h2>See personalized recommendations</h2>
+  <button class="signin-btn width: 150px">Sign in</button>
+  <p>New customer?<a href="#">Start here</a>.</p>
+ </div>
+ <div class="back">
+  <p>Back to top</p>
+ </div>
+ <footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h5>Get to Know Us</h5>
+          <a href="#">About Amazon</a>
+          <a href="#">Careers</a>
+          <a href="#">Press Releases</a>
+          <a href="#">Amazon Science</a>
+      </div>
+      <div class="footer-section">
+          <h5>Connect with Us</h5>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+      </div>
+      <div class="footer-section">
+          <h5>Make Money with Us</h5>
+          <a href="#">Sell on Amazon</a>
+          <a href="#">Sell under Amazon Accelerator</a>
+          <a href="#">Amazon Global Selling</a>
+          <a href="#">Fulfillment by Amazon</a>
+      </div>
+      <div class="footer-section">
+          <h5>Let Us Help You</h5>
+          <a href="#">Your Account</a>
+          <a href="#">Returns Centre</a>
+          <a href="#">100% Purchase Protection</a>
+          <a href="#">Help</a>
+      </div>
+  </div>
+ </footer>
+  <div class="footer-bottom">
+    <p>&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
